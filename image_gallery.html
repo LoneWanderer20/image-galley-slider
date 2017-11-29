@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Image Gallery</title>
+<link href="resetCSS.css" rel="stylesheet" type="text/css">
+<link href="image_gallery.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+       
+   <div class="imageGalleryCont">
+        <div class="sidePart sideLeft">
+        	<div id="start" class="imageControls"></div>
+        	<div id="back" class="imageControls"></div>
+        </div>
+        <div class="imageCont">
+        	<div id="displayImage1" class="displayImage"></div>
+        	<div id="displayImage2" class="displayImage"></div>
+        </div>
+        <div class="sidePart sideRight">
+        	<div id="forward" class="imageControls"></div>
+        	<div id="end" class="imageControls"></div>
+        </div>  
+        
+        <div id="smallImageCont" class="smallImageCont">
+            <div id="smallPrev" class="smallPrev"></div>
+           
+            <div class="smallImageInnerCont">
+                <div id="imageSlideCont" class="imageSlideCont">
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div> 
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div>
+                    <div class="smallImage"></div> 
+				</div>
+			</div>
+            
+            <div id="smallNext" class="smallNext"></div>   	
+        </div>	
+        
+        <div id="controlsCont" class="controlsCont controlsContClosed">
+            <form class="animTypeCont animConts" action="">
+               <h4 class="animTitle">Animation</h4>
+               Slide Right <input class="animOptions" type="radio" name="animType" value="slideLeft" checked /><br>
+               Slide Left <input class="animOptions" type="radio" name="animType" value="slideRight" /><br>
+               Slide Down <input class="animOptions" type="radio" name="animType" value="slideDown" /><br>
+               Slide Up <input class="animOptions" type="radio" name="animType" value="slideUp" /><br>
+               Fade <input class="animOptions" type="radio" name="animType" value="fadeInOut" />
+			</form>
+       	    <form class="animSpeedCont animConts" action="">
+               <h4 class="animTitle">Speed</h4>
+               Slow <input class="animOptions" type="radio" name="animSpeed" value="slow" /><br>
+               Medium <input class="animOptions" type="radio" name="animSpeed" value="medium" checked /><br>
+               Fast <input class="animOptions" type="radio" name="animSpeed" value="fast" /><br>
+			</form>
+       	    <form class="animIntervalCont animConts" action="">
+               <h4 class="animTitle">Interval</h4>
+               5s <input class="animOptions" type="radio" name="animInterval" value="five" /><br>
+               10s <input class="animOptions" type="radio" name="animInterval" value="ten" checked /><br>
+               15s <input class="animOptions" type="radio" name="animInterval" value="fifteen" /><br>
+			</form>
+      	    <div class="controlsTitle">
+       	        <h2>Animation Controls</h2>
+			</div>
+       	    <form class="otherControls" action="image_gallery.php" method="post" enctype="multipart/form-data">
+       	        <h4 class="animTitle">Upload Image</h4>
+       	    	<input class="fileInput" type="file" name="fileInput" />
+       	    	<input id="uploadButton" class="fileSubmit" type="submit" value="Upload" name="fileSubmit" /> 
+       	    	<span class="loginSpan" >To upload images to your account, <a href="/practicePHP/practicePHP/login_form_project/login_form.php">login</a></span>
+       	    	<button id="deleteImage" class="deleteButton" type="button">Delete Last Image</button>
+       	    </form>
+        	<button id="controlsContButton" class="controlsContButton"></button>
+        </div>
+        
+    </div>
+   
+<script type="text/javascript" src="image_gallery.js"></script>
+</body>
+</html>
